@@ -1,0 +1,22 @@
+{
+  "editor.colorDecorators": true,
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "db",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "containerdb",
+      "database": "postgres_db",
+      "username": "postgres_user",
+      "password": "postgres_password"
+    }
+  ],
+  "editor.defaultColorDecorators": "always",
+  "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+  "python.analysis.extraPaths": [
+    "/workspace/backend"
+  ],
+  "python-envs.pythonProjects": []
+}

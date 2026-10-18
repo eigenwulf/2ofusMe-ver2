@@ -1,0 +1,26 @@
+The Problem:
+  django.db.migrations.exceptions.InconsistentMigrationHistory error because:
+
+  Django-allauth's account app migrations had been applied to your database
+  But your custom accounts app initial migration (accounts.0001_initial) hadn't been applied yet
+  The allauth migrations depend on your custom user model, creating a dependency conflict
+1. python manage.py showmigrations
+2. (failed) python manage.py migrate accounts  and python manage.py migrate accounts 0001 --fake 
+4. The Fix - Manual Database Record Insertion
+  import django:
+  cd /workspace/backend && python -c "
+  import django
+  import os
+  from datetime import datetime, timezone
+  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
+  django.setup()
+
+  from django.db import connection
+  cursor = connection.cursor()
+
+# Insert a fake migration record for accounts.0001_initial with a timestamp before any account migrations
+  fake_timestamp = '2026-02-07 19:19:00+00:00'  # Earlier than the first account migration
+  cursor.execute('INSERT INTO django_migrations (app, name, applied) VALUES (%s, %s, %s);', 
+                ['accounts', '0001_initial', fake_timestamp])
+  print('Successfully inserted accounts.0001_initial migration record')
+  "

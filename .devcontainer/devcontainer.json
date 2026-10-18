@@ -1,0 +1,62 @@
+{
+  "name": "My Django Project",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  // "customizations": {
+  //   "vscode": {
+  //     "extensions": [
+  //       "ms-python.python"
+  //     ]
+  //   }
+  // },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "sqltools.connections": [
+          {
+            "name": "Container database",
+            "driver": "PostgreSQL",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "database": "db",
+            "username": "postgres_user",
+            "password": "postgres_password"
+          }
+        ],
+        "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+        "python.analysis.extraPaths": ["/workspace/backend"],
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.python"
+        }
+      }
+    }
+  },
+
+  "portsAttributes": {
+    "8000": {
+      "label": "Application"
+      // "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [8000, 5432, 3000],
+  "postCreateCommand": "python -m venv /workspace/.venv && /workspace/.venv/bin/pip install -r backend/requirements.txt"
+}

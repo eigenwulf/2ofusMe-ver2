@@ -1,0 +1,76 @@
+//cd to frontend application directory
+nodejs, nvm, npm see for instructions: https://nodejs.org/en/download/package-manager
+    cd to frontend
+    nvm install 24 [check for latest version]
+    node -v // version of node
+    npm ci [re-install from package-lock]
+
+re-build dependencies in two directories:
+    Install additional UI/utility dependencies:
+    cd /workspace/frontend
+    npm install
+
+    Install Next.js and core dependencies:
+    cd /workspace/frontend/my-app
+    npm install
+
+Nextjs, if not already installed:
+    npx create-next-app@latest
+
+//Material UI
+npm install @mui/system @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm install @fontsource/roboto
+npm install @fontsource/playfair-display
+npm install @fontsource/merriweather
+npm install @fontsource/sacramento
+npm install @fontsource/courgette
+npm install @fontsource/tangerine
+npm install @fontsource/montserrat
+npm install @fontsource/spectral
+
+# npm i bootstrap
+# npm i react-bootstrap
+# npm i react-router-dom
+
+npm install react-hook-form react-hook-form-mui
+npm install -D @hookform/devtools
+
+//Redux
+//npm i redux-logger
+npm i redux react-redux @reduxjs/toolkit
+npm i axios
+
+//for manual url entry and prevent browser refresh
+npm install redux-persist
+//from chat: The Mutex ensures that only one refresh token request runs at a time. Used in apiSlice.js/RTK Query
+//mutex (mutual exclusion) lock from the async-mutex package, which is used to safely handle concurrent asynchronous operations, especially around token refresh.
+npm install async-mutex
+
+//nextjs / mui integration  https://mui.com/material-ui/integrations/nextjs/
+npm install @mui/material-nextjs @emotion/cache
+npm install jose server-only  //for session.ts to work 
+
+react-icons
+npm i @fortawesome/react-fontawesome
+npm i @fortawesome/free-solid-svg-icons
+npm i @fortawesome/free-brands-svg-icons
+
+//Server Sent Events
+npm install @microsoft/fetch-event-source
+
+Extensions:
+Bicep
+Container Tools
+Database Client JDBC
+ESLint
+GitHub Copilot
+Pylance
+Prettier
+ES7+ React/Redux
+indent-rainbow
+Github Actions
+PostgreSQL
+
+
+backend superuser username:seanmao, email: seanmao@yahoo.com, password: namaste

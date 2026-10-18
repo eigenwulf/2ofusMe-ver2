@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///workspace/frontend/app/%28auth%29/login/layout.tsx"],"sourcesContent":["import Appbar_Landing from '../../__components/Appbar/appbar-landing'\n\nexport default function Layout({children} \n  : {children: React.ReactNode} ) {\n\n  return (\n      <>\n\n        {children}\n      </>\n  );\n}\n"],"names":["Layout","children"],"mappings":";;;;;;AAEe,SAASA,OAAO,EAACC,QAAQ,EACT;IAE7B,qBACI;kBAEGA;;AAGT"}}]
+}

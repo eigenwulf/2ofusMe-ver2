@@ -1,0 +1,1 @@
+DELETE FROM accounts_rep WHERE customuser_id = 37;

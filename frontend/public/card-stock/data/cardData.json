@@ -1,0 +1,28 @@
+{
+    "cards": [
+      {
+        "id": 1,
+        "title":"Beige Invitation",
+      "fields": [
+        {"field": "field_1", "text":"Save the Date", "font": "montserrat", "fontSize": 20, "color": "black", "positionTop":"100px"},
+        {"field": "field_2", "text":"Anna & Jared", "font": "sacramento", "fontSize": 30, "color": "blue", "positionTop":"150px"}, 
+        {"field": "field_3", "text":"05.September.2027", "font": "Arial", "fontSize": 16, "color": "blue", "positionTop":"200px"},
+        {"field": "field_4", "text":"Banquet Hall, This Town, California", "font": "spectral", "fontSize": 14, "color": "blue", "positionTop":"300px"}
+        ],
+        "image": "/card-stock/examples/Beige-Invitation.png"
+      },
+      
+      {
+        "id": 2,
+        "title":"Mediterranean Vibes",
+        "fields":[
+          {"field": "field_1", "text":"Save the Date", "font": "montserrat", "fontSize": 35, "color": "black", "positionTop":"100px"},
+          {"field": "field_2", "text":"Anna & Jared", "font": "sacramento", "fontSize": 40, "color": "blue", "positionTop":"150px"}, 
+          {"field": "field_3", "text":"05.September.2027", "font": "Arial", "fontSize": 16, "color": "blue", "positionTop":"200px"},
+          {"field": "field_4", "text":"Banquet Hall, This Town, California", "font": "spectral", "fontSize": 14, "color": "blue", "positionTop":"300px"},
+          {"field": "field_5", "text":"Extra Field Example", "font": "spectral", "fontSize": 14, "color": "blue", "positionTop":"400px"}
+          ],
+        "image": "/card-stock/examples/Mediterranean-Invitation.png"
+      }
+    ]
+  }

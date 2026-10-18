@@ -1,0 +1,8 @@
+{
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(open)/howitworks/page": "app/(open)/howitworks/page.js",
+  "/(private)/addressbook/page": "app/(private)/addressbook/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/[...path]/route": "app/api/auth/[...path]/route.js",
+  "/page": "app/page.js"
+}

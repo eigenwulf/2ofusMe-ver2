@@ -1,0 +1,117 @@
+
+<div class="container-sm px-0 px-md-5 box">
+  <div class="row align-items-center text-left px-3 box" >
+    <h2>Welcome to Django {{ user }}</h2>
+    </div>
+
+<div class="row  text-left px-3 box" >
+
+<!-- ROW 1 _____________________________________________________ -->
+  <!-- ROW1 COLUMN 1 -->
+  <div class="col-md-4 box">
+    <h3>Authentication</h3>
+    <ul>
+      <li  style=>
+        <a style="font-size: 20px; line-height: 2" href="accounts/allauth">allauth</a>
+<pre>   
+      /accounts/allauthsignup/ 
+      /accounts/allauthlogin/ </p>
+</pre>
+      </li>
+
+      <li  style=>
+        <a style="font-size: 20px; line-height: 2" href="api/auth/login">dj-rest-auth Login</a>  
+      </li>
+<pre>    LOGIN  /api/auth/login/ - Obtain token
+    LOGOUT  /api/auth/logout/ - Revoke token
+    RESET   /api/auth/password/reset/ - Request password reset
+    CHANGE PASS   /api/auth/password/change/ - Change password
+    GET USER  /api/auth/user/ - Get current user
+    REGISTRATION  /api/auth/registration/ - Register new user via allauth
+</pre>
+    </ul>
+  </div>
+
+  <!-- ROW 1 COLUMN 2 -->
+    <div class="col-md-3 box">
+    <h3>Administrative</h3>
+      <ul>
+      <li class="nav-item">
+        <a style="font-size: 20px; line-height: 2" aria-current="page" href="admin">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a style="font-size: 20px; line-height: 2" aria-current="page" href="{% url 'home:home' %}">Home</a>
+      </li>
+    </ul>
+    </div>
+
+<!-- ROW 2_________________________________________________________________________ -->
+<div class="row align-items-center text-left px-3 box m-3" >
+  <!-- ROW2 COL1  -->
+  <div class="col-md-12 box">
+
+    <h3>Personalize</h3>
+      <a style="font-size: 20px; line-height: 2" href="personalize/api/greetingcard">Personalize API</a></br>
+<pre>	  <h6> 	URL	       Objective              Action</h5>
+/personalize/api/greetingcard              List reps      GET</br>
+/personalize/api/greetingcard              Create a rep        POST</br>
+/personalize/api/greetingcard/&lt;id&gt;/      Retrieve a rep      GET</br>
+/personalize/api/greetingcard/&lt;id&gt;/    update rep          PUT</br>
+/personalize/api/greetingcard/&lt;id&gt;/	  Update card, send only modified data  PATCH</br>
+/personalize/api/greetingcard/&lt;id&gt;/	  Delete               DELETE</br>
+</pre>
+
+    <h3>Recipients</h3>
+      <a style="font-size: 20px; line-height: 2" href="recipients/api/recipients">Recipients API</a></br>    
+      <a style="font-size: 20px; line-height: 2" href="recipients/api/greetingcard_recipient">Greetingcard-Recipient API</a></br>
+<pre>	  <h6> 	URL	       Objective              Action</h5>
+recipients/api/recipients              List reps      GET</br>
+recipients/api/recipients              Create a rep        POST</br>
+recipients/api/recipients/&lt;id&gt;/      Retrieve a rep      GET</br>
+recipients/api/recipients/&lt;id&gt;/    update rep          PUT</br>
+recipients/api/recipients/&lt;id&gt;/	  Update card, send only modified data  PATCH</br>
+recipients/api/recipients/&lt;id&gt;/	  Delete               DELETE</br>
+</pre>      
+
+<pre>
+recipients/api/greetingcard_recipient insert above for greetingcard-recipient
+</pre>
+
+
+  <u>Join Table API: Recipients and GreetingCard</u>
+
+/recipients/api/greetingcard_recipient/?greetingcard_id=[id]   RETRIEVE                 GET</br>
+/recipients/api/greetingcard_recipient                         DELETE/CREATE            POST</br>
+
+  <u>Links to send to recipients to enter addresses</u>
+
+/recipients/forms/submit/<uuid:token>	onSubmit link to save recipients data through link POST</br>
+/recipients/create-link	   api call to create a link  POST</br>
+</pre>
+
+<p></p>
+  <!-- END ROW2 -->
+  </div>
+
+<p></p>
+
+<pre>
+
+
+
+
+
+
+
+
+
+  
+</pre>
+  <div class="col-md-3 box"></div>
+  </div>
+
+  <!-- END ENCLOSING ROW -->
+  </div>
+<!-- END CONTAINER -->
+</div>
+
