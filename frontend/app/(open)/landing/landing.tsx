@@ -7,6 +7,7 @@ import Image from 'next/image';
 import cardData from '@/public/card-stock/data/cardData.json'
 import collage from './assets/landing2/landing2Collage.png';
 import orbit from './assets/10jul2026Orbit.png';
+import flowchart from './assets/landing/landing_flowchart.png';
 import mediterranean from '@/public/card-stock/examples/Mediterranean-Invitation.png'
 
 export default function Landing() {
@@ -28,8 +29,8 @@ export default function Landing() {
     </Typography></Typography>
   </Box>
 
+{/* ROW 2_____________________________________________________________________________________________________________________ */}
     <Stack sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-    
     <Grid container sx={{maxWidth:'1250px', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%', mt:5, mb:5}}> 
 
     <Typography textAlign='center' 
@@ -43,7 +44,7 @@ export default function Landing() {
 {/* col1 */}
   <Grid container sx={{maxWidth:'1250px', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%'}}> 
     <Grid size={{xs:7}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-      <Image src={collage} alt="collage graphic" style={{ width:'80%', objectFit: 'cover' }}/>
+      <Image src={collage} alt="collage" style={{ width:'80%', objectFit: 'cover' }}/>
     </Grid>
 
 {/* col2 */}
@@ -51,19 +52,14 @@ export default function Landing() {
         <Typography textAlign='left' sx={{ fontSize: '20pt', color: '#000000', fontFamily: 'Spectral', fontWeight: 500, ml:3, mt:5, mb: 5}} >
           Choose your style
         </Typography>
-    <Grid container>
-      <Grid size={{xs:6, sm:4, md:3}} sx={{ px:1}}>
-        <Image alt='' src={mediterranean}/>
-      </Grid>
 
-      <Grid size={{xs:6, sm:4, md:3}} sx={{ px:1}}>
-        <Image alt='' src={mediterranean}/>
-      </Grid>
+        <Image src={flowchart} alt="how it works flowchart" style={{ width: '80%', maxHeight: 400, objectFit: 'cover' }}/>
 
+    {/* <Grid container>
       <Grid size={{xs:6, sm:4, md:3}} sx={{ px:1}}>
         <Image alt='' src={mediterranean}/>
       </Grid>
-    </Grid>
+    </Grid> */}
 
         <Button variant="outlined"  size= 'medium' sx={{ color: 'black',width:'fit-content', height:'fit-content', fontWeight: 400, border:1, boxShadow: '0 0 0 3px lightblue', m:4}}>
           More
