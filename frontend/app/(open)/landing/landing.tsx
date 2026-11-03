@@ -30,47 +30,37 @@ export default function Landing() {
   </Box>
 
 {/* ROW 2_____________________________________________________________________________________________________________________ */}
-    <Stack sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-    <Grid container sx={{maxWidth:'1250px', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%', mt:5, mb:5}}> 
+  <Stack direction='column' sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <Grid container sx={{maxWidth:'1600px', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%', mt:5, mb:12}}> 
 
-    <Typography textAlign='center' 
-    sx={{ fontSize: {xs:'16pt', sm:'18pt'}, color: 'white', fontWeight: '450', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt:0, mb:3 }} >
-      The Romance of Paper Wedding Invitations <br/>    
-        <Typography textAlign='center' sx={{ fontSize: {xs:'16pt', sm:'18pt'}, color: '#5f646e', fontWeight: '550', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt:0, mb:3 }} >
-          at no cost to you    
+      <Grid size={{xs:12}}>
+        <Typography textAlign='center' sx={{ fontSize: {xs:'16pt', sm:'30pt'}, color: 'white', fontWeight: '450', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt:0, mb:8 }} >
+          One less expense for happily ever after  
         </Typography>
-    </Typography>
-
+      </Grid>
 {/* col1 */}
-  <Grid container sx={{maxWidth:'1250px', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%'}}> 
-    <Grid size={{xs:7}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-      <Image src={collage} alt="collage" style={{ width:'80%', objectFit: 'cover' }}/>
-    </Grid>
+
+    <Grid size={{xs:6}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <Image src={collage} alt="collage" style={{ width:'70%', objectFit: 'cover' }}/>
+    </Grid> 
+    {/* </Grid> */}
 
 {/* col2 */}
-    <Grid size={{xs:5}}>
-        <Typography textAlign='left' sx={{ fontSize: '20pt', color: '#000000', fontFamily: 'Spectral', fontWeight: 500, ml:3, mt:5, mb: 5}} >
-          Choose your style
-        </Typography>
+    <Grid size={{xs:6}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-        <Image src={flowchart} alt="how it works flowchart" style={{ width: '80%', maxHeight: 400, objectFit: 'cover' }}/>
-
-    {/* <Grid container>
-      <Grid size={{xs:6, sm:4, md:3}} sx={{ px:1}}>
-        <Image alt='' src={mediterranean}/>
-      </Grid>
-    </Grid> */}
+      <Stack sx={{width:'100%'}}>
+        <Image src={flowchart} alt="how it works flowchart" style={{ width: '100%', maxHeight: 700, objectFit: 'cover' }}/>
 
         <Button variant="outlined"  size= 'medium' sx={{ color: 'black',width:'fit-content', height:'fit-content', fontWeight: 400, border:1, boxShadow: '0 0 0 3px lightblue', m:4}}>
           More
         </Button>
-
+      </Stack>
     </Grid>
-{/* end Grid container */}
-  </Grid >
 
-{/* end Grid container */}
+{/* end Grid container Row2 */}
   </Grid>
+
+{/* end Stack Row2 */}
   </Stack>
 </Container>
 	);

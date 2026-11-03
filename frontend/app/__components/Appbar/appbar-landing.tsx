@@ -8,7 +8,7 @@ import { SxProps, Theme } from '@mui/material';
 import Image from 'next/image'
 import Link from 'next/link'
 
-import logo from './assets/logoBlueGrad.png';
+import logo from './assets/logo_small.png';
 
 // ________________________________________________________Redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -16,7 +16,6 @@ import type { RootState } from '../../store/store';
 import { useLogoutMutation } from '../../store/features/api/apiSlice'  //makes internal api endpoints call
 import { clearCredentials } from '../../store/features/auth/authSlice'; 
 import { persistor } from '../../store/store';
-import { Rubik_Broken_Fax } from 'next/font/google';
 
 export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
@@ -60,7 +59,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
   return (
 
-<AppBar  position="relative" elevation={0} sx={{ display:"flex",alignItems:'flex-end',justifyContent:'center', position:'relative', backgroundColor: 'black' }} > 
+<AppBar  position="relative" elevation={0} sx={{ display:"flex",alignItems:'flex-end',justifyContent:'center', position:'relative', backgroundColor: '' }} > 
       {/* The <AppBar> needs position: 'relative' so the fill-mode <Image> (which is position: absolute) is contained within it. Add position: 'relative' to the sx prop and add zIndex to the content so it renders above the image: */}
     {/* <Image
       alt="" src={bkgrnd_color} placeholder="blur" quality={100} fill sizes="100vw" 
@@ -82,9 +81,9 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
           style={{maxHeight:'100%', maxWidth:'120px', objectFit: 'contain',}}
         />
         </Link>
-        <Typography sx={{ display: { xs: 'none', sm: 'block' },fontFamily: 'var(--font-montserrat)', fontSize: {sm:'8pt', md:'9.5pt'}, color: 'rgb(0, 0, 0)',fontWeight: '500',letterSpacing:1,textAlign: 'center', pt:0}} >
+        {/* <Typography sx={{ display: { xs: 'none', sm: 'block' },fontFamily: 'var(--font-montserrat)', fontSize: {sm:'8pt', md:'9.5pt'}, color: 'rgb(0, 0, 0)',fontWeight: '500',letterSpacing:1,textAlign: 'center', pt:0}} >
         Sponsored Wedding Cards
-        </Typography>
+        </Typography> */}
       </Stack>
     </Box>
 
@@ -92,40 +91,40 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
 {/* Collapsed Menu: xs only ___________________________________________________*/}
 
-          {/* disappears when size is greater than md */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:'center', alignContent:'center'}}>
-            <IconButton
-              size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon  sx={{ fontSize: 40 }} />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
-            >
+      {/* disappears when size is greater than md */}
+      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:'center', alignContent:'center'}}>
+        <IconButton
+          size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true"
+          onClick={handleOpenNavMenu}
+          color="inherit"
+        >
+          <MenuIcon  sx={{ fontSize: 40 }} />
+        </IconButton>
+        <Menu
+          id="menu-appbar"
+          anchorEl={anchorElNav}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
+          sx={{ display: { xs: 'block', md: 'none' } }}
+        >
 
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link href="/howitworks" style={{ textDecoration: 'none' }}>
-                  <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '8pt',display: 'inline'}}>How It Works</Typography>
-                </Link>
-              </MenuItem>
+          <MenuItem onClick={handleCloseNavMenu}>
+            <Link href="/howitworks" style={{ textDecoration: 'none' }}>
+              <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '8pt',display: 'inline'}}>How It Works</Typography>
+            </Link>
+          </MenuItem>
 
-            </Menu>
-          </Box>
+        </Menu>
+      </Box>
 
 
   {/* col 2, middle Normal menu from sm to xl*/}
