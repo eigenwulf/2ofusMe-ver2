@@ -13,7 +13,7 @@ export default function Home () {
         {/* <Box sx={{ position: "relative", zIndex: 1 }}> */}
         <Appbar_Landing />     
         <Landing />
-        <Landingpt2 />
+        {/* <Landingpt2 /> */}
         <div id="card-gallery">
           <CardGallery />
         </div>

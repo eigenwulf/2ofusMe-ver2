@@ -59,12 +59,9 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
   return (
 
-<AppBar  position="relative" elevation={0} sx={{ display:"flex",alignItems:'flex-end',justifyContent:'center', position:'relative', backgroundColor: '' }} > 
+<AppBar  position="relative" elevation={0} sx={{ display:"flex",alignItems:'flex-end',justifyContent:'center', position:'relative', backgroundColor: '#FAF9F6' }} > 
       {/* The <AppBar> needs position: 'relative' so the fill-mode <Image> (which is position: absolute) is contained within it. Add position: 'relative' to the sx prop and add zIndex to the content so it renders above the image: */}
-    {/* <Image
-      alt="" src={bkgrnd_color} placeholder="blur" quality={100} fill sizes="100vw" 
-      style={{ objectFit: 'cover', zIndex: 0 }}
-    /> */}
+
     {/* The AppBar component gets its background from the MUI theme's primary.main color by default.  */}
 
   <Grid container sx={{ position:'relative', zIndex:1, width:'100%' }}>
@@ -74,11 +71,11 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
     <Box sx={{ display: "flex", justifyContent: "center", alignContent:'center'}}>
       <Stack direction="column" alignItems="center">
         <Link
-        href="/" style={{paddingLeft:'1px', paddingRight:'1px', paddingTop:'5px'}}>
+        href="/" style={{paddingLeft:'1px', paddingRight:'1px', paddingTop:'5px',paddingBottom:'5px'}}>
         <Image
           src={logo}
           alt='1DMail Logo'
-          style={{maxHeight:'100%', maxWidth:'120px', objectFit: 'contain',}}
+          style={{width:'200px', objectFit: 'contain',}}
         />
         </Link>
         {/* <Typography sx={{ display: { xs: 'none', sm: 'block' },fontFamily: 'var(--font-montserrat)', fontSize: {sm:'8pt', md:'9.5pt'}, color: 'rgb(0, 0, 0)',fontWeight: '500',letterSpacing:1,textAlign: 'center', pt:0}} >
@@ -126,7 +123,6 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
         </Menu>
       </Box>
 
-
   {/* col 2, middle Normal menu from sm to xl*/}
 
   <Grid size = {6} sx={{display: { xs: 'none', md: 'flex'}, justifyContent:'center'}}>
@@ -134,7 +130,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
       {/* Left */}
       <Box sx={{ flex: "0 0 auto", alignSelf: 'flex-end', paddingBottom:1 }}>
         <Link href="/addressbook" style={{ textDecoration: 'none' }}>
-          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '12pt',display: 'inline'}}>
+          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: '', px: 1, fontSize: '12pt',display: 'inline'}}>
             Address Book
           </Typography>
         </Link>
@@ -142,7 +138,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
       <Box sx={{ flex: "0 0 auto", alignSelf: 'flex-end', paddingBottom:1 }}>
         <Link href="/mycards" style={{ textDecoration: 'none' }}>
-          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '12pt',display: 'inline'}}>
+          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: '', px: 1, fontSize: '12pt',display: 'inline'}}>
             My Cards
           </Typography>
         </Link>
@@ -150,7 +146,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
       <Box sx={{ flex: "0 0 auto", alignSelf: 'flex-end', paddingBottom:1 }}>
         <Link href="/howitworks" style={{ textDecoration: 'none' }}>
-          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '12pt',display: 'inline'}}>
+          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: '', px: 1, fontSize: '12pt',display: 'inline'}}>
             How It Works
           </Typography>
         </Link>
@@ -158,7 +154,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
 
       <Box sx={{ flex: "0 0 auto", alignSelf: 'flex-end', paddingBottom:1 }}>
         <Link href="/about" style={{ textDecoration: 'none' }}>
-          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: 'white', px: 1, fontSize: '12pt',display: 'inline'}}>
+          <Typography sx={{ fontFamily: 'var(--font-montserrat)', color: '', px: 1, fontSize: '12pt',display: 'inline'}}>
             About
           </Typography>
         </Link>
@@ -172,7 +168,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
     <Box onClick={auth_user ? handleLogout : undefined} sx={{ alignSelf: 'center', pb:1 }}>
       {!auth_user ? 
       <><Button variant='contained' color="inherit" size='small' href="/signup"><Typography sx={{color:'#0c2980', fontWeight:600}}>Signup</Typography></Button>
-      <Button color="inherit" size='small' href="/login" ><Typography sx={{color:'#87a3f8', fontWeight:600}}>Login</Typography></Button>
+      <Button color="inherit" size='small' href="/login" ><Typography sx={{color:'primary.dark', fontWeight:600}}>Login</Typography></Button>
       </>
       :
       <Button variant='outlined' color="inherit" size='small'><Typography sx={{color:'#87a3f8', fontWeight:600}}>Logout</Typography></Button>

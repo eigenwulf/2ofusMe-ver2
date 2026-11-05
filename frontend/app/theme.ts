@@ -2,19 +2,32 @@
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
+// 60-30-10” rule: 60 percent dominant neutral, 30 percent secondary, 10 percent primary or accent
   palette: {
     primary: {
-      main: '#aac4a2',
-      dark: '#354d54',
-      contrastText: '#713e11ff',
+      main: '#043a7e',
+      // main: '#aac4a2',
+      dark: '#010420',
+      // contrastText: '#713e11ff',
+      // contrastText: '#402416',
+      contrastText: '#471d09'
     },
     secondary: {
-      main:'#1565C0',
+      main:'#aac4a2',
       light: 'rgb(122, 105, 230)',
-      dark:'rgb(31, 23, 87)'
+      dark:'#1565c0'
     },
   },
-  
+
+//Secondary color uses:
+// Secondary buttons (outlined or lighter-filled versions of actions)
+// Section backgrounds or banded content areas to separate parts of a page
+// Illustrations, icons, charts, and infographics
+// Tags, badges, and category labels
+// Hover and pressed states
+// Decorative accents, such as dividers, highlights, and promotional tiles
+
+
   // current default is spectral. to use the below fonts, 
   // 1. load in layout.ts 2. add 'font'.variable to html className, 3. use in Typography sx, fontFamily: 'var(--font-quintessential)',
     typography: {
