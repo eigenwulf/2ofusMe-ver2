@@ -1,5 +1,4 @@
 {
-  "/(open)/howitworks/page": "app/(open)/howitworks/page.js",
   "/api/auth/[...path]/route": "app/api/auth/[...path]/route.js",
   "/page": "app/page.js"
 }

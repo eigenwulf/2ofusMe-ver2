@@ -79,7 +79,7 @@ export default function Pricing() {
       </Grid>
 
 {/* row2 */}
-      {/* <Box sx={{display:'flex', justifyContent:'center'}}> */}
+      
 			<Grid container sx={{ maxWidth:'xl', backgroundColor: 'lightblue', borderRadius:3, border:1}}>
         
 
@@ -89,7 +89,7 @@ export default function Pricing() {
         </Grid>
 
       </Grid>
-      {/* </Box> */}
+
 {/* end row2*/}
 
       <Box sx={{display: 'flex', alignItems:"center", justifyContent: "center",}}>
