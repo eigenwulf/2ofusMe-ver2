@@ -47,6 +47,19 @@ export default function Landing() {
 return (
 <Container maxWidth={false} disableGutters sx={{ m:0, p:0}} >
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 {/* ROW 1_____________________________________________________________________________________________________________________ */}
   <Box sx={{backgroundColor:'#d8a790',m:0, p:0}}>
 
@@ -79,8 +92,9 @@ return (
       </Stack>
     </Grid>
 
+{/* end Grid container row 2*/}
   </Grid>
-{/* end Grid container */}
+  {/* end box rows 1 and 2  */}
   </Box>
 
 {/* ROW 3_____________________________________________________________________________________________________________________ */}
