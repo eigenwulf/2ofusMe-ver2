@@ -4,26 +4,23 @@ import {Box, Button, Card, CardMedia, CardContent, CardActions, Container, Divid
 //NEXT
 import Image from 'next/image';
 
-import cardData from '@/public/card-stock/data/cardData.json'
 import collage from './assets/landing2/landing2Collage.png';
 import orbit from './assets/landing/space.png';
-import flowchart from './assets/landing/landing_flowchart.png';
-import howflow from './assets/landing/howflow.png';
-import howflow2 from './assets/landing/how_flow2.png';
-import paper from './assets/landing/light marine gradient watercolor_scaled.png';
-import mediterranean from '@/public/card-stock/examples/Mediterranean-Invitation.png'
+import announce from './assets/landing/cardAnnounce.png';
+import invite from './assets/landing/cardInvite.png';
+import saveDate from './assets/landing/cardSaveDate.png';
+import mailbox from './assets/landing/mailbox.png';
+
 import { relative } from 'path';
 
 export default function Landing() {
-	
-	return (
+return (
 
-  <Container maxWidth={false} disableGutters sx={{backgroundColor:'#d8a790', m:0, p:0}} >
+<Container maxWidth={false} disableGutters sx={{backgroundColor:'#d8a790', m:0, p:0}} >
 
 {/* <Box sx={{backgroundColor:'#d8a790',m:0, p:0}}> */}
 <Box sx={{backgroundColor:'#faf9f6',m:0, p:0}}>
   
-
 {/* version 0_____________________________________________________________________________________________________________________ */}
 
   <Typography textAlign='center' sx={{ fontSize:{xs:0, sm:0, md:28}, fontWeight: '450', color: 'black', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 5, }} >
@@ -34,7 +31,8 @@ export default function Landing() {
   </Typography>
 
 {/* col1 */}
-  <Grid container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth:'xl', mx: 'auto', pb:5}}> 
+<Box sx={{backgroundColor:'#d8a790',m:0, p:0}}>
+  <Grid container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth:'xl', mx: 'auto', pb:5, pt:10}}> 
     {/* mx: 'auto' is what centers the Grid itself within the parent when it has a constrained maxWidth. */}
 
       <Grid size={{xs:0, sm:4}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
@@ -43,14 +41,47 @@ export default function Landing() {
 
 {/* col2 */}
     <Grid size = {{xs:12, sm:8}} sx={{ display:"flex", alignItems: 'center', justifyContent: 'center',  objectFit: 'contain', pl:1}}> 
-      <Stack direction='row' sx={{width:'100%', display:"flex", alignItems: 'center', justifyContent: 'center', mr:5, pl:-5}}>
+    <Stack direction='column' sx={{width:'100%', display:"flex", alignItems: 'center', justifyContent: 'center', mr:5}}>
 
-        <Image src={howflow2} alt="how it works flow diagram" style={{  maxHeight: 350, width: '80%', objectFit: 'contain', border: '1px solid #c7c7c7', borderRadius: '15px', padding:'9px' }} />
-        <Typography textAlign='center' sx={{fontSize:{xs:24, sm:30}, color:'white', mt:6}}>Printed, addressed, and mailed for  <span style={{color:'black'}}>$0</span></Typography>
+      <Stack direction='row' sx={{width:'100%', display:"flex", alignItems: 'center', justifyContent: 'center', borderTop: '2px solid #c7c7c7', borderBottom: '2px solid #c7c7c7', p: 3, ml:3}}>
+        <Card sx={{ml:3, mr:1}}>
+          <CardContent>
+          <Image src={announce} alt="Wedding Announcement Card" style={{width: '100%', objectFit: 'contain', border: '1px solid #c7c7c7', borderRadius: '15px', }} />
+          </CardContent>
+          <Typography textAlign='center' sx={{fontSize:{xs:14, sm:16}}}>Announcement</Typography>
+        </Card>
+        
+        <Card sx={{mx:1}}>
+          <CardContent>
+          <Image src={saveDate} alt="Save the Date Card" style={{width: '100%', objectFit: 'contain', border: '1px solid #c7c7c7', borderRadius: '15px', }} />
+          </CardContent>
+          <Typography textAlign='center' sx={{fontSize:{xs:16, sm:18}}}>Save the Date</Typography>
+        </Card>
+
+        <Card sx={{mx:1}}>
+          <CardContent>
+          <Image src={invite} alt="Wedding Invite Card" style={{width: '100%', objectFit: 'contain', border: '1px solid #c7c7c7', borderRadius: '15px', }} />
+          </CardContent>
+          <Typography textAlign='center' sx={{fontSize:{xs:14, sm:16}}}>Invitation</Typography>
+        </Card>
+        
+        <Card sx={{mx:1}}>
+          <CardContent>
+          <Image src={mailbox} alt="photo of mailbox" style={{width: '100%', objectFit: 'cover', border: '1px solid #c7c7c7', borderRadius: '15px' }} />
+          </CardContent>
+          <Typography textAlign='center' sx={{fontSize:{xs:16, sm:18}}}>Joy of Mail</Typography>
+        </Card>
+
+        </Stack>
+        <Typography textAlign='center' sx={{fontSize:{xs:24, sm:30}, color:'white', mt:6}}>Printed, addressed, and mailed for  <span style={{color:'blue'}}>$0</span></Typography>
       </Stack>
+
     </Grid>
   {/* end Grid container */}
   </Grid>
+{/* end Box background color */}
+</Box>
+
   </Box>
 
 
