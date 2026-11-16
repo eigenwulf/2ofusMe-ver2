@@ -13,10 +13,15 @@ import { updateCardObject, clearCardObject } from '../../store/features/project/
 import beige from '@/public/card-stock/examples/Beige-Invitation.png'
 import swan from '@/public/card-stock/examples/Swan-Invitation.png'
 import mediterranean from '@/public/card-stock/examples/Mediterranean-Invitation.png'
+import beige2 from '@/public/card-stock/examples/Beige-Invitation.png'
+import swan2 from '@/public/card-stock/examples/Swan-Invitation.png'
+import mediterranean2 from '@/public/card-stock/examples/Mediterranean-Invitation.png'
+import beige3 from '@/public/card-stock/examples/Beige-Invitation.png'
+import swan3 from '@/public/card-stock/examples/Swan-Invitation.png'
 // Build time import: @/ alias replaces frontend/ as per tsconfig.json
 
 //buiding list of loaded images for map below
-const imageList = [beige, mediterranean, swan]
+const imageList = [beige, mediterranean, swan, beige2, mediterranean2, swan2, swan3, beige3]
 
 
 export default function CardGallery() {
