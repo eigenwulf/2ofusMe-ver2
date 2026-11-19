@@ -4,6 +4,7 @@ import Landing from './(open)/landing/landing'
 import Landingpt2 from './(open)/landing/landingpt2'
 import CardGallery from './(open)/landing/cardgallery'
 import Appbar_Landing from './__components/Appbar/appbar-landing'
+import Footer from './__components/footer/footer'
 
 export default function Home () {
   return (
@@ -18,11 +19,8 @@ export default function Home () {
           <CardGallery />
         </div>
         
-        <footer style={{
-            backgroundColor: "lightblue",
-            padding:"1rem"
-          }}> Footer Here
-        </footer>
+        <Footer />
+
       </Container>
     </div> 
     );  

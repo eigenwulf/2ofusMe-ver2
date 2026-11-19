@@ -8,7 +8,7 @@ import { SxProps, Theme } from '@mui/material';
 import Image from 'next/image'
 import Link from 'next/link'
 
-import logo from './assets/logo_small.png';
+import logo from './assets/logo_small.svg';
 
 // ________________________________________________________Redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -74,7 +74,7 @@ export default function AppbarLanding({ sx }: { sx?: SxProps<Theme> }) {
         href="/" style={{paddingLeft:'1px', paddingRight:'1px', paddingTop:'5px',paddingBottom:'5px'}}>
         <Image
           src={logo}
-          alt='1DMail Logo'
+          alt='2ofusme Logo'
           style={{width:'200px', objectFit: 'contain',}}
         />
         </Link>

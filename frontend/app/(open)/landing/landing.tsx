@@ -10,6 +10,7 @@ import announce from './assets/landing/cardAnnounce.png';
 import invite from './assets/landing/cardInvite.png';
 import saveDate from './assets/landing/cardSaveDate.png';
 import mailbox from './assets/landing/mailbox.png';
+import couple from './assets/landing/coupleEnvelope.png';
 import brand1 from './assets/landing/brand1.png';
 import brand2 from './assets/landing/brand2.png';
 import brand3 from './assets/landing/brand3.png';
@@ -28,7 +29,7 @@ return (
   
 {/* version 0_____________________________________________________________________________________________________________________ */}
 
-  <Typography textAlign='center' sx={{ fontSize:{xs:0, sm:0, md:32}, fontWeight: '450', color: 'black', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: {xs:2,sm:3, md:7}, pb: {xs:2, sm:2} }}>
+  <Typography textAlign='center' sx={{ fontSize:{xs:0, sm:0, md:32}, fontFamily: 'var(--font-montserrat)', fontWeight: '450', color: 'black', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: {xs:2,sm:3, md:7}, pb: {xs:2, sm:2} }}>
     One Less Expense for Happily Ever After
   </Typography>
   <Typography textAlign='center' sx={{ fontSize:{xs:24, sm:26}, fontWeight: '450', color: 'black', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 2, pb:3}} >
@@ -43,7 +44,7 @@ return (
 {/* col1 collage*/}
       <Grid size={{xs:0, sm:2, md:3}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <Box sx={{border: '2px solid #8899a0'}}>
-          <Image src={collage} alt="collage graphic" style={{ width:'100%', maxHeight: 300, objectFit: 'contain' }}/>
+          <Image src={collage} alt="collage graphic" style={{ width:'100%', maxHeight: 350, objectFit: 'contain' }}/>
         </Box>
       </Grid>
 
@@ -95,7 +96,7 @@ return (
 {/* col 3 mailbox */}
       <Grid size={{xs:0, sm:2, md:3}} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <Box sx={{border: '2px solid #8899a0'}}>
-          <Image src={mailbox} alt="image of mailboxs" style={{ width:'100%', maxHeight: 300, objectFit: 'cover' }}/>
+          <Image src={couple} alt="image of mailboxs" style={{ width:'100%', height: 350, objectFit: 'cover' }}/>
         </Box>
       </Grid>
 

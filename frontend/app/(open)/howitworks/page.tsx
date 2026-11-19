@@ -47,49 +47,13 @@ export default function Landing() {
 return (
 <Container maxWidth={false} disableGutters sx={{ m:0, p:0}} >
 
-
 {/* ROW 1_____________________________________________________________________________________________________________________ */}
-  <Box sx={{backgroundColor:'#faf9f6',m:0, pt:5}}>
+    <Box sx={{backgroundColor:'#eab66c',m:0, p:0}}>
 
-<Grid container sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', maxWidth:'xl', mx: 'auto', pb:5}}> 
-      {/* mx: 'auto' is what centers the Grid itself within the parent when it has a constrained maxWidth. */}
-
-{/* col1 */}
-    <Grid size = {{xs:12, sm:7}} sx={{ display:"flex", alignItems: 'flex-start', justifyContent: 'center',  objectFit: 'contain', pl:1}}> 
-        <Stack direction='column' sx={{width:'80%', mr:5, pl:-3}}>
-          <Typography textAlign='center' sx={{ fontSize:{xs:24, sm:26}, fontWeight: '450', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 0, pb:5 }} >
-            You personalize online, we print and mail for free
-          </Typography>
-
-          <Image src={howitworksFlow} alt="how it works flow diagram" style={{  maxHeight: 300, width: '100%', objectFit: 'contain', padding:'1px' }} />
-
-          <Typography textAlign='center' sx={{fontSize:{xs:18, sm:22}, pt:3, color: 'ivory'}}>You personalize online, we print and mail for free</Typography>
-          <Typography textAlign='center' sx={{fontSize:{xs:16, sm:18}, color: 'ivory'}}>Made possible by our generous advertising sponsors</Typography>
-        </Stack>
-    </Grid>
-
-{/* col2 */}
-      <Grid size={{xs:12, sm:5}} sx={{display: 'flex', alignItems: 'flex-start', justifyContent: 'center'}}>
-        <Stack>
-        <Image src={collage} alt="collage graphic" style={{ width:'80%', maxHeight: 350, objectFit: 'contain' }}/>
-        <Typography textAlign='center' sx={{ fontSize: '18pt', fontWeight: '450', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 5, }} >
-          Made possible by our hand-picked sponsors
-        </Typography>
-        </Stack>
-      </Grid>
-
-{/* end Grid container row*/}
-  </Grid>
-  {/* end box for background  */}
-  </Box>
-
-{/* ROW 1_____________________________________________________________________________________________________________________ */}
-  <Box sx={{backgroundColor:'#d8a790',m:0, p:0}}>
-
-    <Typography textAlign='center' sx={{ fontSize: '24pt', fontWeight: '450', color: 'white', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 5, }} >
+    <Typography textAlign='center' sx={{ fontSize: '24pt', fontWeight: '450', color: '', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 5, }} >
       One Less Expense for Happily Ever After
     </Typography>
-    <Typography textAlign='center' sx={{ fontSize: '20pt', fontWeight: '450', color: 'white', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 2, pb:3}} >
+    <Typography textAlign='center' sx={{ fontSize: '20pt', fontWeight: '450', color: '', letterSpacing:1, lineHeight: 1.2, textAlign: 'center', pt: 2, pb:3}} >
       How It Works
     </Typography>
 
